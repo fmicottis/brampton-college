@@ -1,0 +1,19 @@
+# DECLARE lightOne is an INTEGER
+# DECLARE lightTwo is an INTEGER
+# lightOne <-- 0
+# lightTwo <-- 0
+# OUTPUT "is light one on? 1 for yes, 0 for no"
+# INPUT lightOne
+# OUTPUT "is light two on?"
+# INPUT lightTwo
+# IF lightOne = lightTwo DO
+# OUTPUT "turn one of both of the lights off"
+# ELSE
+# OUTPUT "everything is good"
+
+lightOne = input("is light one on? 1 for yes, 0 for no: ")
+lightTwo = input("is light two on? 1 for yes, 0 for no: ")
+if lightOne == lightTwo:
+    print("turn one or both of the lights off")
+else:
+    print("leave it")
