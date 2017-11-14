@@ -1,0 +1,31 @@
+starSign = ""
+month = ["december","january","february","march","april","may","june","july","august","september","october","november"]
+shortenedMonth = ["dec","jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov"]
+starSigns = ["Sagittarius","Capricorn","Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio"]
+dayStarSign = [22,20,19,21,20,21,21,23,23,23,23,22]
+validMonth = False
+
+dayOfBirth = int(input("Please enter the day on which you were born (number): "))
+
+while (dayOfBirth > 31) or (dayOfBirth < 1):
+    print("This is not a valid day, enter again")
+    dayOfBirth = int(input("Please enter the day on which you were born: "))
+
+monthOfBirth = input("Now enter the month on which you were born (word): ")
+monthOfBirth = monthOfBirth.lower()
+
+while validMonth == False:
+
+    for index in range(0,11):
+        if (monthOfBirth == (month[index])) or (monthOfBirth == (shortenedMonth[index])):
+            validMonth = True
+
+if validMonth == False:
+    monthOfBirth = input("Invalid month, enter it again: ")
+
+for index in range(0,11):
+    if (monthOfBirth == month[index]) or (monthOfBirth == (shortenedMonth[index])):
+                if (dayOfBirth < dayStarSign[index]):
+                    starSign = starSigns[index]
+                else:
+                    starSign = starSigns[index+1]
