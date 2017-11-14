@@ -1,0 +1,15 @@
+Multiplier = [1,2,4,8,16,32,64,128]
+binaryNumber = [0,0,0,0,0,0,0,0]
+sum = 0
+i = 0
+j = 0
+k = 0
+print("please enter a binary number, bit by bit!")
+for i in range(0,8):
+    binaryNumber[i] = int(input())
+    print(binaryNumber)
+    for j in range(0,8):
+        sum = sum + binaryNumber[j] * Multiplier[j]
+        print(sum)
+for k in range(0,8):
+    print(k)
