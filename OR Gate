@@ -1,0 +1,6 @@
+lightOne = int(input("is light one on? 1 for yes, 0 for no: "))
+lightTwo = int(input("is light two on? 1 for yes, 0 for no: "))
+if lightOne==1 or (lightTwo==1):
+    print("turn one or both of the lights off")
+else:
+    print("leave it")
