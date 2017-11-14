@@ -1,0 +1,49 @@
+# Finn Micottis
+# 09/11/2017
+# AS Class
+
+# not writing my name/date/class (3)
+# not using real for average hits (1)
+# not finishing task 7 (3)
+
+# DECLARE Counter : integer
+# DECLARE teamName : string
+# DECLARE playerHits : integer
+# DECLARE totalHits : integer
+# DECLARE averageHits : real
+# DECLARE pointsEarned : integer
+
+Counter = 0
+teamName = "zeus"
+playerHits = 0
+totalHits = 0
+averageHits = 0.0
+pointsEarned = 0
+numberOfPlayers = [1, 2, 3, 4, 5, 6]
+
+def get_details():
+    global teamName, playerHits, totalHits
+    teamName = input("Hi! Please enter the name of your team: ")
+
+    for index in range(0,6):
+        playerHits = int(input("Please enter the number of hits for the current player: "))
+
+        totalHits = totalHits + playerHits
+
+get_details()
+
+def calculate_values():
+    global averageHits, totalHits, pointsEarned
+
+    averageHits = totalHits/6
+
+    if totalHits > 50:
+        pointsEarned = pointsEarned + 1
+
+    if averageHits > 10:
+        pointsEarned = pointsEarned + 1
+
+
+calculate_values()
+
+print("team",teamName,"has",(pointsEarned),"points")
