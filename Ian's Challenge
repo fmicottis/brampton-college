@@ -1,0 +1,24 @@
+#8 ages between 0 and 119 and tells me where the highest age is and where the lowest age is.
+#Investigate how to generate random numbers.
+#Extend program so that it generates 4000 ages and tells you where the highest and the lowest are.
+ageArray = []
+highestValue = 0
+lowestValue = 5000
+highPos = 0
+lowPos = 0
+randrange = 0
+
+import random
+
+for index in range(0,8):
+    ageArray.append(random.randint(0, 5000))
+    if ageArray[index] >= highestValue:
+        highestValue = ageArray[index]
+        highPos = index + 1
+    elif ageArray[index] <= lowestValue:
+        lowestValue = ageArray[index]
+        lowPos = index + 1
+print(highestValue)
+print(highPos)
+print(lowestValue)
+print(lowPos)
